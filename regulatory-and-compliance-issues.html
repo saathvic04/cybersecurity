@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Ensure image does not overflow its container */
+        }
+        .image-container img {
+            max-width: 100%; /* Ensure image fits container width */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .text-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            overflow: auto; /* Enable scrolling for text if it exceeds container height */
+        }
+        .text-container p {
+            margin: 10px 0;
+            font-size: large; /* Adjust font size for readability */
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack elements vertically on smaller screens */
+            }
+            .image-container,
+            .text-container {
+                flex: none;
+                height: 50vh; /* Adjust height to fit half of the viewport height */
+                overflow: hidden; /* Hide overflow on smaller screens */
+            }
+            .text-container {
+                padding: 10px; /* Reduce padding for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://th.bing.com/th/id/OIP.Mws9Q5jvjUUXwuRPNobULQAAAA?rs=1&pid=ImgDetMain" alt="Cybersecurity">
+        </div>
+        <div class="text-container">
+            <p>General Data Protection Regulation (GDPR): A regulation in the EU for data protection and privacy.</p>
+            <p>Health Insurance Portability and Accountability Act (HIPAA): US regulation for protecting health information.</p>
+            <p>Payment Card Industry Data Security Standard (PCI DSS): Security standards for organizations that handle credit card information.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .image-container {
+            flex: 1;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .text-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .text-container p {
+            margin: 10px 0;
+            font-size: x-large;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .image-container,
+            .text-container {
+                flex: none;
+                width: 100%;
+                height: 50vh;
+            }
+            .text-container {
+                height: auto;
+                padding: 10px;
+            }
+            .text-container p {
+                font-size: large;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://cdn.ttgtmedia.com/rms/onlineimages/it_security_frameworks_standards_and_regulations-f_mobile.png" alt="Cybersecurity">
+        </div>
+        <div class="text-container">
+            <p>NIST Cybersecurity Framework: Provides guidelines for managing and reducing cybersecurity risk.</p>
+            <p>ISO/IEC 27001: An international standard for information security management systems (ISMS).</p>
+            <p>CIS Controls: A set of best practices for securing IT systems and data.</p>
+        </div>
+    </div>
+</body>
+</html>

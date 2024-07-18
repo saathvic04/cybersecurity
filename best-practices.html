@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .image-container {
+            flex: 1;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .text-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .text-container p {
+            margin: 10px 0;
+            font-size: x-large;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .image-container,
+            .text-container {
+                flex: none;
+                width: 100%;
+                height: 50vh;
+            }
+            .text-container {
+                height: auto;
+                padding: 10px;
+            }
+            .text-container p {
+                font-size: large;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://www.stealthlabs.com/wp-content/uploads/2020/12/cybersecurity-best-practices-to-protect-from-cyber-threats.jpg" alt="Cybersecurity">
+        </div>
+        <div class="text-container">
+            <p>Regular Updates and Patching: Keeping software and systems updated to protect against vulnerabilities.</p>
+            <p>Strong Password Policies: Using complex, unique passwords and changing them regularly.</p>
+            <p>Multi-factor Authentication (MFA): Adding extra layers of security beyond just passwords.</p>
+            <p>Security Awareness Training: Educating employees about cybersecurity threats and best practices.</p>
+        </div>
+    </div>
+</body>
+</html>

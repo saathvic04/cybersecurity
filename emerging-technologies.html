@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .image-container {
+            flex: 1;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .text-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        .text-container p {
+            margin: 10px 0;
+            font-size: x-large;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .image-container,
+            .text-container {
+                flex: none;
+                width: 100%;
+                height: 50vh;
+            }
+            .text-container {
+                height: auto;
+                padding: 10px;
+            }
+            .text-container p {
+                font-size: large;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://th.bing.com/th/id/OIP.pO35ckfI1OhnwlaNKbxD-gHaD4?rs=1&pid=ImgDetMain" alt="Cybersecurity">
+        </div>
+        <div class="text-container">
+            <p>Artificial Intelligence (AI) and Machine Learning (ML): Used for threat detection, behavior analysis, and predictive analytics.</p>
+            <p>Blockchain: Provides a decentralized and secure way to record transactions, which can enhance security in various applications.</p>
+        </div>
+    </div>
+</body>
+</html>
